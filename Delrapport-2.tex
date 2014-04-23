@@ -302,8 +302,11 @@ Here is a class diagram of the model layer as we imagine it might look.
 \newline
 \newline
 \includegraphics[scale=0.2]{class-diagram.png}
-\newline
-\newline
+\subsection*{e) Sequence diagram}
+We've chosen the use case of \texttt{AddProb}, \texttt{AddProject} and \texttt{Search} thus we think this is the main use cases of our webapplication.\\\\
+Since we haven't made the object model yet, obviously we can't determine which specific objects we'll call in our sequence diagram. Therefore we've initially created the sequence diagram using the webpages that we do know we'll have. Iterative while investigating which objects are needed we will then update and improve the sequence diagrams. 
+\section{4.}
+\section{Program- and systemtest}
 There will be one abstract model class that implements methods used by all models. There will then be subclasses of this model that implement the domain functionality.\\
 They will be associated with each other in different ways. A prop will be associated with many productions and can have many notes. A production can have many props and a note belongs to exactly one prop.\\
 There will then also be various attributes on the models that correspond to the database columns. The models will also have methods but at this point its hard to say specifically which methods they will need. The prop model will however most likely need methods for changing its state and accessing the other associated objects.
