@@ -312,6 +312,10 @@ Here is a class diagram of the model layer as we imagine it might look.
 \newline
 \newline
 \includegraphics[scale=0.2]{class-diagram.png}
+\newline
+There will be one abstract model class that implements methods used by all models. There will then be subclasses of this model that implement the domain functionality.\\
+They will be associated with each other in different ways. A prop will be associated with many productions and can have many notes. A production can have many props and a note belongs to exactly one prop.\\
+There will then also be various attributes on the models that correspond to the database columns. The models will also have methods but at this point its hard to say specifically which methods they will need. The prop model will however most likely need methods for changing its state and accessing the other associated objects.
 \subsection*{e) Sequence diagram}
 We've chosen the use case of \texttt{AddProb}, \texttt{AddProject} and \texttt{Search} thus we think these are the main use cases of our webapplication.\\\\
 Since we haven't made the object model yet, obviously we can't determine which objects we'll call in our sequence diagram. Therefore we've initially created the sequence diagram using the webpages that we do know we'll have. Iterative while investigating which objects are needed, we will then update and improve the sequence diagrams.\\\\
@@ -322,10 +326,6 @@ Since we haven't made the object model yet, obviously we can't determine which o
 As we have not started coding yet a summary of the system-design so far, will be very abstract. So far we have used a lot of resources on the initial planning, both internal in the group, and in cooperation with the client, to ensure that our initial design-plan meets the expectations the client have for the new system. This has been a some what difficult task, as the new system will cause the client to change how they administratively handle the props. \\ 
 Right now our main tasks will be to create the mySQL database, which involve transferring all of the data in the current system to our new system and adapt it to the fit the new database-design. We will, when possible, in this process, begin the PHP-coding and in that way develop back- and front-end simultaneously.
 \section{Program- and systemtest}
-There will be one abstract model class that implements methods used by all models. There will then be subclasses of this model that implement the domain functionality.\\
-They will be associated with each other in different ways. A prop will be associated with many productions and can have many notes. A production can have many props and a note belongs to exactly one prop.\\
-There will then also be various attributes on the models that correspond to the database columns. The models will also have methods but at this point its hard to say specifically which methods they will need. The prop model will however most likely need methods for changing its state and accessing the other associated objects.
-\section{Program- and system-test}
 The amount of testing we have done at this moment is very limited because we don't have any code yet to test. We have however discussed how we will structure the testing when we start coding.
 \newline
 \newline
